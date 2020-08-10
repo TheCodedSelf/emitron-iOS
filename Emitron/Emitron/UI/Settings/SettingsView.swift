@@ -53,7 +53,7 @@ struct SettingsView: View {
         
         Section(header:
           HStack {
-            Text("App Icon")
+            Text(Constants.appIcon)
               .font(.uiTitle4)
               .foregroundColor(.titleText)
             
@@ -70,7 +70,7 @@ struct SettingsView: View {
         Button(action: {
           self.licensesPresented.toggle()
         }) {
-          Text("Software Licenses")
+          Text(Constants.licenses)
         }
           .sheet(isPresented: $licensesPresented) {
             LicenseListView(visible: self.$licensesPresented)
@@ -80,11 +80,11 @@ struct SettingsView: View {
         if showLogoutButton {
           VStack {
             if sessionController.user != nil {
-              Text("Logged in as \(sessionController.user?.username ?? "")")
+              Text("\(Constants.loggedInAs) \(sessionController.user?.username ?? "")")
                 .font(.uiCaption)
                 .foregroundColor(.contentText)
             }
-            MainButtonView(title: "Sign Out", type: .destructive(withArrow: true)) {
+            MainButtonView(title: Constants.signOut, type: .destructive(withArrow: true)) {
               self.presentationMode.wrappedValue.dismiss()
               // This is hacky. But without it, the sheet doesn't actually dismiss.
               DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {

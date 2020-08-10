@@ -39,8 +39,8 @@ struct PermissionsLoadingView: View {
       }
     .alert(isPresented: $showLogoutAlert) {
       Alert(
-        title: Text("Force Logout?"),
-        primaryButton: .destructive(Text("Logout"), action: {
+        title: Text(Constants.forceLogout),
+        primaryButton: .destructive(Text(Constants.logout), action: {
           self.sessionController.logout()
         }),
         secondaryButton: .cancel()

@@ -34,7 +34,7 @@ struct ProContentLockedOverlayView: View {
       HStack {
         Image.padlock
         
-        Text("Pro Course")
+        Text(Constants.proCourse)
           .font(.uiTitle1)
           .foregroundColor(.titleText)
       }

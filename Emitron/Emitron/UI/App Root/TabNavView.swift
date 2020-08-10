@@ -76,9 +76,9 @@ struct TabNavView: View {
 struct TabNavView_Previews: PreviewProvider {
   static var previews: some View {
     TabNavView(
-      libraryView: AnyView(Text("LIBRARY")),
-      myTutorialsView: AnyView(Text("MY TUTORIALS")),
-      downloadsView: AnyView(Text("DOWNLOADS"))
+      libraryView: AnyView(Text(Constants.library.uppercased())),
+      myTutorialsView: AnyView(Text(Constants.myTutorials.uppercased())),
+      downloadsView: AnyView(Text(Constants.downloads.uppercased()))
     ).environmentObject(TabViewModel())
   }
 }

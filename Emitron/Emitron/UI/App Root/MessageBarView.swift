@@ -61,13 +61,13 @@ struct MessageBarView_Previews: PreviewProvider {
       Button(action: {
         messageBus.messageVisible.toggle()
       }) {
-        Text("Show/Hide")
+        Text(Constants.showHide)
       }
       
       Button(action: {
         messageBus.post(message: Message(level: .success, message: "Button clicked!"))
       }) {
-        Text("Post new message")
+        Text(Constants.postNew)
       }
       
       MessageBarView(messageBus: messageBus)

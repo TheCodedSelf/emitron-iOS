@@ -35,7 +35,7 @@ struct LicenseListView: View {
   var body: some View {
     NavigationView {
       VStack {
-        Text("This app uses a selection of fantastic 3rd-party libraries. You can see details and their licenses below.")
+        Text(Constants.libraries)
           .font(.uiLabel)
           .foregroundColor(.contentText)
           
@@ -45,7 +45,7 @@ struct LicenseListView: View {
               .font(.uiLabel)
               .foregroundColor(.contentText)
           }
-            .navigationBarTitle("Software Licenses")
+          .navigationBarTitle(Constants.licenses)
             .navigationBarItems(trailing: self.dismissButton)
         }
       }

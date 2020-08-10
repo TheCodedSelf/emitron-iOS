@@ -53,7 +53,7 @@ struct TitleCheckmarkView: View {
       Spacer()
       
       CheckmarkView(isOn: isOn, onChange: onChange)
-        .accessibility(label: Text("Toggle \(name)"))
+        .accessibility(label: Text("\(Constants.toggle) \(name)"))
     }
       .frame(minHeight: 46)
   }

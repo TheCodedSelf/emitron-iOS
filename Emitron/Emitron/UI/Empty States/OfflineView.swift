@@ -34,13 +34,13 @@ struct OfflineView: View {
       Image("emojiCrying")
         .padding([.bottom], 30)
       
-      Text("No Connection")
+      Text(Constants.noConnection)
         .font(.uiTitle2)
         .foregroundColor(.titleText)
         .multilineTextAlignment(.center)
         .padding([.leading, .trailing, .bottom], 20)
       
-      Text("Please check internet connection and try again.")
+      Text(Constants.checkConnection)
         .font(.uiLabel)
         .lineSpacing(8)
         .foregroundColor(.contentText)

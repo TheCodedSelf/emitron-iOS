@@ -47,11 +47,11 @@ enum MyTutorialsState: String {
   var displayString: String {
     switch self {
     case .inProgress:
-      return "In Progress"
+      return Constants.inProgress
     case .completed:
-      return "Completed"
+      return Constants.completed
     case .bookmarked:
-      return "Bookmarks"
+      return Constants.bookmarked
     }
   }
 }
