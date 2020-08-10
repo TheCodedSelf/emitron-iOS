@@ -33,7 +33,7 @@ extension DownloadDeletionConfirmation {
     Alert(
       title: Text(title),
       message: Text(message),
-      primaryButton: .destructive(Text("Delete"), action: confirm),
+      primaryButton: .destructive(Text(Constants.delete), action: confirm),
       secondaryButton: .cancel()
     )
   }

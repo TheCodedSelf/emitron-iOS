@@ -87,7 +87,7 @@ struct LibraryView: View {
           .foregroundColor(.iconButton)
           .frame(width: .filterButtonSide, height: .filterButtonSide)
       })
-        .accessibility(label: Text("Filter Library"))
+        .accessibility(label: Text(Constants.filterLibrary))
         .padding([.horizontal], .searchFilterPadding)
     }
   }

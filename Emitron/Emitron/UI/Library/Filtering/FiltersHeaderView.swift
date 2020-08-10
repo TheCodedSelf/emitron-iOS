@@ -56,7 +56,7 @@ struct FiltersHeaderView: View {
           
           Spacer()
           
-          Text(isExpanded ? "Hide (\(numOfOnFilters))" : "Show (\(numOfOnFilters))")
+          Text(isExpanded ? "\(Constants.hide) (\(numOfOnFilters))" : "\(Constants.show) (\(numOfOnFilters))")
             .foregroundColor(.contentText)
             .font(.uiLabelBold)
         }

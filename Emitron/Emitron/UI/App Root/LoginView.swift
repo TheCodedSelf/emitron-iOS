@@ -47,13 +47,13 @@ struct LoginView: View {
             .frame(width: 265)
             .padding([.bottom], 40)
           
-          Text("Watch anytime,\nanywhere")
+          Text(Constants.watchAnytime)
             .font(.uiTitle1)
             .foregroundColor(.titleText)
             .multilineTextAlignment(.center)
             .padding([.bottom], 15)
           
-          Text("Watch over 3,000+ video tutorials\non iPhone and iPad.")
+          Text(Constants.watchThousands)
             .font(.uiLabel)
             .foregroundColor(.contentText)
             .multilineTextAlignment(.center)
@@ -67,13 +67,13 @@ struct LoginView: View {
             .frame(width: 265)
             .padding([.bottom], 40)
           
-          Text("Take your videos on\nthe go")
+          Text(Constants.onTheGo)
             .font(.uiTitle1)
             .foregroundColor(.titleText)
             .multilineTextAlignment(.center)
             .padding([.bottom], 15)
           
-          Text("Download and watch videos — even\nwhen you’re offline.")
+          Text(Constants.watchOffline)
             .font(.uiLabel)
             .foregroundColor(.contentText)
             .multilineTextAlignment(.center)
@@ -83,7 +83,7 @@ struct LoginView: View {
       
       Spacer()
       
-      MainButtonView(title: "Sign In", type: .primary(withArrow: true)) {
+      MainButtonView(title: Constants.signIn, type: .primary(withArrow: true)) {
         self.sessionController.login()
       }
       .padding([.leading, .trailing], 18)

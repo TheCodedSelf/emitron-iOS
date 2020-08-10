@@ -39,13 +39,13 @@ struct LogoutView: View {
       
       Spacer()
       
-      Text("No access")
+      Text(Constants.noAccess)
         .font(.uiTitle1)
         .foregroundColor(.titleText)
         .padding([.bottom], 15)
         .multilineTextAlignment(.center)
       
-      Text("The raywenderlich app is only available to members.")
+      Text(Constants.membersOnly)
         .lineSpacing(8)
         .font(.uiLabel)
         .foregroundColor(.contentText)
@@ -54,7 +54,7 @@ struct LogoutView: View {
       
       Spacer()
       
-      MainButtonView(title: "Sign Out", type: .destructive(withArrow: true)) {
+      MainButtonView(title: Constants.signOut, type: .destructive(withArrow: true)) {
         self.sessionController.logout()
       }
       .padding([.leading, .trailing], 18)

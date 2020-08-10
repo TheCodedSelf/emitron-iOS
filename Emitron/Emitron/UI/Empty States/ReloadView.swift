@@ -42,13 +42,13 @@ struct ReloadView: View {
       Image("emojiCrying")
         .padding([.bottom], 30)
       
-      Text("Something went wrong.")
+      Text(Constants.wentWrong)
         .font(.uiTitle2)
         .foregroundColor(.titleText)
         .multilineTextAlignment(.center)
         .padding([.leading, .trailing, .bottom], 20)
       
-      Text("Please try again.")
+      Text(Constants.tryAgain)
         .lineSpacing(8)
         .font(.uiLabel)
         .foregroundColor(.contentText)
@@ -58,7 +58,7 @@ struct ReloadView: View {
       Spacer()
       
       MainButtonView(
-        title: "Reload",
+        title: Constants.reload,
         type: .primary(withArrow: false),
         callback: reloadHandler)
         .padding([.horizontal, .bottom], 20)
